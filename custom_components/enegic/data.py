@@ -9,17 +9,17 @@ if TYPE_CHECKING:
     from homeassistant.config_entries import ConfigEntry
     from homeassistant.loader import Integration
 
-    from .api import IntegrationBlueprintApiClient
+    from .api import EnegicApiClient
     from .coordinator import BlueprintDataUpdateCoordinator
 
 
-type IntegrationBlueprintConfigEntry = ConfigEntry[IntegrationBlueprintData]
+type EnegicConfigEntry = ConfigEntry[EnegicData]
 
 
 @dataclass
-class IntegrationBlueprintData:
+class EnegicData:
     """Data for the Blueprint integration."""
 
-    client: IntegrationBlueprintApiClient
+    client: EnegicApiClient
     coordinator: BlueprintDataUpdateCoordinator
     integration: Integration
