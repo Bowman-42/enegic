@@ -1,0 +1,12 @@
+{
+  "domain": "enegic",
+  "name": "Enegic integration",
+  "codeowners": [
+    "@Bowman-42"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/Bowman-42/enegic",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/Bowman-42/enegic/issues",
+  "version": "0.1.0"
+}
