@@ -1,4 +1,4 @@
-"""Switch platform for integration_blueprint."""
+"""Switch platform for enegic."""
 
 from __future__ import annotations
 
@@ -12,12 +12,12 @@ if TYPE_CHECKING:
     from homeassistant.core import HomeAssistant
     from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
-    from .coordinator import BlueprintDataUpdateCoordinator
+    from .coordinator import EnegicDataUpdateCoordinator
     from .data import EnegicConfigEntry
 
 ENTITY_DESCRIPTIONS = (
     SwitchEntityDescription(
-        key="integration_blueprint",
+        key="enegic",
         name="Integration Switch",
         icon="mdi:format-quote-close",
     ),
@@ -40,11 +40,11 @@ async def async_setup_entry(
 
 
 class EnegicSwitch(EnegicEntity, SwitchEntity):
-    """integration_blueprint switch class."""
+    """enegic switch class."""
 
     def __init__(
         self,
-        coordinator: BlueprintDataUpdateCoordinator,
+        coordinator: EnegicDataUpdateCoordinator,
         entity_description: SwitchEntityDescription,
     ) -> None:
         """Initialize the switch class."""

@@ -1,4 +1,4 @@
-"""Custom types for integration_blueprint."""
+"""Custom types for enegic."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ if TYPE_CHECKING:
     from homeassistant.loader import Integration
 
     from .api import EnegicApiClient
-    from .coordinator import BlueprintDataUpdateCoordinator
+    from .coordinator import EnegicDataUpdateCoordinator
 
 
 type EnegicConfigEntry = ConfigEntry[EnegicData]
@@ -18,8 +18,8 @@ type EnegicConfigEntry = ConfigEntry[EnegicData]
 
 @dataclass
 class EnegicData:
-    """Data for the Blueprint integration."""
+    """Data for the Enegic integration."""
 
     client: EnegicApiClient
-    coordinator: BlueprintDataUpdateCoordinator
+    coordinator: EnegicDataUpdateCoordinator
     integration: Integration

@@ -1,4 +1,4 @@
-"""Adds config flow for Blueprint."""
+"""Adds config flow for Enegic."""
 
 from __future__ import annotations
 
@@ -18,8 +18,8 @@ from .api import (
 from .const import DOMAIN, LOGGER
 
 
-class BlueprintFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
-    """Config flow for Blueprint."""
+class EnegicFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
+    """Config flow for Enegic."""
 
     VERSION = 1
 

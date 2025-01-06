@@ -1,4 +1,4 @@
-"""Sensor platform for integration_blueprint."""
+"""Sensor platform for enegic integration."""
 
 from __future__ import annotations
 
@@ -12,13 +12,13 @@ if TYPE_CHECKING:
     from homeassistant.core import HomeAssistant
     from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
-    from .coordinator import BlueprintDataUpdateCoordinator
+    from .coordinator import EnegicDataUpdateCoordinator
     from .data import EnegicConfigEntry
 
 ENTITY_DESCRIPTIONS = (
     SensorEntityDescription(
-        key="integration_blueprint",
-        name="Integration Sensor",
+        key="enegic",
+        name="Enegic Sensor",
         icon="mdi:format-quote-close",
     ),
 )
@@ -40,11 +40,11 @@ async def async_setup_entry(
 
 
 class EnegicSensor(EnegicEntity, SensorEntity):
-    """integration_blueprint Sensor class."""
+    """enegic Sensor class."""
 
     def __init__(
         self,
-        coordinator: BlueprintDataUpdateCoordinator,
+        coordinator: EnegicDataUpdateCoordinator,
         entity_description: SensorEntityDescription,
     ) -> None:
         """Initialize the sensor class."""
